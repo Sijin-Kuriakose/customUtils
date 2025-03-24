@@ -4,6 +4,7 @@ package in.edu.kristujayanti.propertyBinder;
 import in.edu.kristujayanti.propertyBinder.Eform.Applicant.ApplicantFormsKeysPBinder;
 import in.edu.kristujayanti.propertyBinder.Eform.EformCommonKeysPBinder;
 import in.edu.kristujayanti.propertyBinder.FeeModule.FeeModuleKeysPBinder;
+import in.edu.kristujayanti.propertyBinder.Gym.GymKeysPBinder;
 import in.edu.kristujayanti.propertyBinder.HR.*;
 import in.edu.kristujayanti.propertyBinder.Library.LibraryBookKeysPBInder;
 import in.edu.kristujayanti.propertyBinder.Library.LibraryCheckInAndOutKeysPBinder;
@@ -77,6 +78,7 @@ public final class PropertyEnumRegistry {
         KJUSYS_ENUM_REGISTRY.put("AwardsDataKeys", AwardsDataKeyPBinders.class);
         KJUSYS_ENUM_REGISTRY.put("UpdateVenue", VenueUpdateKeysPBInder.class);
 
+        KJUSYS_ENUM_REGISTRY.put("GymUserProfile", GymKeysPBinder.class);
 
     }
 }

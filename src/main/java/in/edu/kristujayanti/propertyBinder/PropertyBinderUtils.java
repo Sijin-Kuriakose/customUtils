@@ -4,6 +4,7 @@ import in.edu.kristujayanti.propertyBinder.Eform.Applicant.ApplicantFormsKeysPBi
 import in.edu.kristujayanti.propertyBinder.Eform.Applicant.ApplicantProgrammeKeysPBinder;
 import in.edu.kristujayanti.propertyBinder.Eform.EformCommonKeysPBinder;
 import in.edu.kristujayanti.propertyBinder.FeeModule.FeeModuleKeysPBinder;
+import in.edu.kristujayanti.propertyBinder.Gym.GymKeysPBinder;
 import in.edu.kristujayanti.propertyBinder.HR.*;
 import in.edu.kristujayanti.propertyBinder.Library.LibraryBookKeysPBInder;
 import in.edu.kristujayanti.propertyBinder.Library.LibraryCheckInAndOutKeysPBinder;
@@ -100,7 +101,7 @@ public class PropertyBinderUtils {
                 LibraryCheckInAndOutKeysPBinder.class,
                 LibraryBookKeysPBInder.class,
                 LibraryCommonKeysPBinder.class,
-
+                GymKeysPBinder.class,
                 QueueManagerKeysPBinder.class,
 
                 MenuPBinder.class,
