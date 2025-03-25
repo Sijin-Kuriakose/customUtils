@@ -78,7 +78,7 @@ public final class PropertyEnumRegistry {
         KJUSYS_ENUM_REGISTRY.put("AwardsDataKeys", AwardsDataKeyPBinders.class);
         KJUSYS_ENUM_REGISTRY.put("UpdateVenue", VenueUpdateKeysPBInder.class);
 
-        KJUSYS_ENUM_REGISTRY.put("GymUserProfile", GymKeysPBinder.class);
+        KJUSYS_ENUM_REGISTRY.put("Gym", GymKeysPBinder.class);
 
     }
 }
