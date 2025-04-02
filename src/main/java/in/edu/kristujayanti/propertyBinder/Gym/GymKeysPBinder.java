@@ -12,7 +12,7 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
     USER_ID("userId_Gym_Text","User Id", String.class),
     CONTACT_NUMBER("contactNumber_Gym_Long","Contact Number", Long.class),
     EMAIL_ID("emailId_Gym_Text","Email Id", String.class),
-    SUBSCRIPTION_SERVICE_LIST("subscriptionServiceList_Gym_DocumentArray","Subscription Service List", Document.class),
+    SUBSCRIPTION_SERVICE_LIST("subscriptionService_Gym_DocumentArray","Subscription Service List", Document.class),
     SUBSCRIPTION_ADDON_LIST("subscriptionAddonList_Gym_DocumentArray","Subscription Addon List", Document.class),
     //Service
     SERVICE_OID("serviceOid_Gym_ObjectId","Service Id", ObjectId.class),
