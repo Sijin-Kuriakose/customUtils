@@ -28,6 +28,9 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
     DESCRIPTION_ADDON("descriptionAddon_Gym_Text"," Description Addon", String.class),
     DURATION_ADDON("durationAddon_Gym_Int","Duration Addon", Integer.class),
     AMOUNT_ADDON("amountAddon_Gym_Double","Amount Addon", Double.class),
+    ADDON_START_DATE("addon_Start_Date_Gym_Date","Addon Start Date", Long.class),
+    ADDON_END_DATE("addon_End_Date_Gym_Date","Addon End Date", Long.class),
+
     SUB_START_DATE("subStartDate_Gym_Date","Subscription Start Date", Long.class),
     SUB_END_DATE("subEndDate_Gym_Date","Subscription End Date", Long.class),
     TOTAL_COST("total_Cost_Gym_Double","Total Cost", Double.class),
@@ -40,6 +43,7 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
     ATTENDANCE_OID ("attendanceOid_Gym_Text","Attendance Oid", String.class),
     CHECK_IN("checkIn_Gym_DateTime","Check In", Long.class),
     CHECK_OUT("checkOut_Gym_DateTime","Check Out", Long.class);
+//    ATTENDANCE_DATE
 
 
 
