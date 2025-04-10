@@ -39,8 +39,8 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
     TOTAL_COST("total_Cost_Gym_Double","Total Cost", Double.class),
     PAYMENT_DATE("paymentDate_Gym_Date","Payment Date", Long.class),
     METHOD("method_Gym_Text","Method", String.class),
-    STATUS("status_Gym_Text","Status", String.class),
-
+    STATUS("status_Gym_Bool","Status", Boolean.class),
+    AMOUNT_PAYABLE("amount_Payable_Double","Amount Payable",Double.class),
 
     //Attendance
     ATTENDANCE_OID ("attendanceOid_Gym_Text","Attendance Oid", String.class),
