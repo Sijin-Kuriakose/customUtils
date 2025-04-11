@@ -40,7 +40,7 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
     PAYMENT_DATE("paymentDate_Gym_Date","Payment Date", Long.class),
     METHOD("method_Gym_Text","Method", String.class),
     STATUS("status_Gym_Bool","Status", Boolean.class),
-    AMOUNT_PAYABLE("amount_Payable_Double","Amount Payable",Double.class),
+    AMOUNT_PAYABLE("amount_Payable_Gym_Double","Amount Payable",Double.class),
 
     //Attendance
     ATTENDANCE_OID ("attendanceOid_Gym_Text","Attendance Oid", String.class),
