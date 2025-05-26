@@ -13,7 +13,7 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
     CONTACT_NUMBER("contactNumber_Gym_Long","Contact Number", Long.class),
     EMAIL_ID("emailId_Gym_Text","Email Id", String.class),
     SUBSCRIPTION_SERVICE_LIST("subscriptionService_Gym_DocumentArray","Subscription Service List", Document.class),
-    SUBSCRIPTION_ADDON_LIST("subscriptionAddonList_Gym_ObjectIdArray","Subscription Addon List", ObjectId.class),
+    SUBSCRIPTION_ADDON_LIST("subscriptionAddonList_Gym_DocumentArray","Subscription Addon List", Document.class),
     SUBSCRIPTIONS_LIST("subscriptionList_Gym_DocumentArray","Subscription List", Document.class),
     //Service
     SERVICE_OID("serviceOid_Gym_ObjectId","Service Id", ObjectId.class),
@@ -36,6 +36,7 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
 
     SUB_START_DATE("subStartDate_Gym_Date","Subscription Start Date", Long.class),
     SUB_END_DATE("subEndDate_Gym_Date","Subscription End Date", Long.class),
+    PREFERRED_START_DATE("preferredStartDate_Gym_Date","Preferred Start Date", Long.class),
     TOTAL_COST("total_Cost_Gym_Double","Total Cost", Double.class),
     PAYMENT_DATE("paymentDate_Gym_Date","Payment Date", Long.class),
     METHOD("method_Gym_Text","Method", String.class),
@@ -46,6 +47,7 @@ public enum GymKeysPBinder implements KJUSYSPropertyBinder{
     ATTENDANCE_OID ("attendanceOid_Gym_Text","Attendance Oid", String.class),
     CHECK_IN("checkIn_Gym_DateTime","Check In", Long.class),
     CHECK_OUT("checkOut_Gym_DateTime","Check Out", Long.class);
+
 //    ATTENDANCE_DATE
 
 
