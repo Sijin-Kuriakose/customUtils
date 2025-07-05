@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FaceLogix - Attendance Management</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/static/assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.css">
+    <link rel="stylesheet" href="/static/assets/css/lightbox.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f7f6;
+        }
+        .main-header {
+            background: #343a40;
+            padding: 10px 0;
+            color: #ffffff;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .main-nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .main-banner {
+            background: url('/static/assets/images/banner-bg.jpg') center center no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-align: center;
+        }
+        .main-banner .caption h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .main-button .btn {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="main-header clearfix" role="header">
+    <div class="container">
+        <div class="logo">
+            <a href="#"><em>Face</em>Logix</a>
+        </div>
+        <nav id="menu" class="main-nav" role="navigation">
+            <ul class="main-menu">
+                <li><a href="#home">HOME</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Banner -->
+<section class="section main-banner" id="home">
+    <div class="caption">
+        <h2><em>Effortlessly</em> Manage Attendance</h2>
+        <div class="main-button">
+            <!-- Use Flask routes here instead of direct HTML files -->
+            <a href="{{ url_for('admin_login') }}" class="btn btn-primary">Admin Login</a>
+            <a href="{{ url_for('staff_login') }}" class="btn btn-secondary">Employee Login</a>
+        </div>
+    </div>
+</section>
+
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/assets/js/custom.js"></script>
+<script src="/static/assets/js/owl.js"></script>
+<script src="/static/assets/js/slick.js"></script>
+<script src="/static/assets/js/isotope.js"></script>
+<script src="/static/assets/js/accordions.js"></script>
+
+</body>
+</html>

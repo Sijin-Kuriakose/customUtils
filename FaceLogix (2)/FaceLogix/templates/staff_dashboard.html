@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - FaceLogix</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #dfefff !important;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .dashboard-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .dashboard-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-title {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: #007bff;
+        }
+
+        /* Flash message styles */
+        .flashes {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px; /* Add some space below the flash messages */
+        }
+
+        .flashes li.success {
+            color: green;
+        }
+
+        .flashes li.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">FaceLogix - STAFF DASHBOARD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="/logout">LOGOUT</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container">
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <h2>STAFF DASHBOARD</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card dashboard-card" onclick="location.href='/view_profile'">
+                    <div class="card-body">
+                        <h5 class="card-title">View Profile</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card dashboard-card" onclick="location.href='/mark_attendance'">
+                    <div class="card-body">
+                        <h5 class="card-title">Mark Attendance</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card dashboard-card" onclick="location.href='/view_own_attendance'">
+                    <div class="card-body">
+                        <h5 class="card-title">View Attendance</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card dashboard-card" onclick="location.href='/send_feedback'">
+                    <div class="card-body">
+                        <h5 class="card-title">Send Feedback</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

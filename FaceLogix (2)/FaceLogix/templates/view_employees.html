@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Employees - FaceLogix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .back-link a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .employee-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .employee-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .employee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .employee-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .employee-card h3 {
+            font-size: 22px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .employee-card p {
+            font-size: 16px;
+            color: #777;
+            margin: 5px 0;
+        }
+        .employee-card .action-buttons {
+            margin-top: 15px;
+        }
+        .action-buttons a, .action-buttons form {
+            display: inline-block;
+            margin: 5px;
+        }
+        .action-buttons a {
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .action-buttons a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .action-buttons form button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .action-buttons form button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>EMPLOYEE LIST</h2>
+    <div class="back-link">
+        <a href="{{ url_for('admin_dashboard') }}">BACK</a>
+    </div>
+
+
+    <div class="employee-list">
+        {% for employee in employees %}
+        <div class="employee-card">
+            <img src="{{ url_for('static', filename='known_faces/' + employee[6]) }}" alt="{{ employee[1] }}">
+            <h3>{{ employee[1] }}</h3>
+            <p><strong>Email:</strong> {{ employee[2] }}</p>
+            <p><strong>Role:</strong> {{ employee[3] }}</p>
+            <p><strong>Type:</strong> {{ employee[5] }}</p>
+            <div class="action-buttons">
+                <a href="{{ url_for('update_employee', id=employee[0]) }}">Update</a>
+               <form action="{{ url_for('delete_employee', id=employee[0]) }}" method="post" style="display: inline;">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .profile-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-image {
+        width: 150px;  /* Set desired width */
+        height: 150px; /* Set desired height */
+        border-radius: 50%; /* Keep it circular */
+        object-fit: cover; /* Ensure image covers the area without distortion */
+    }
+    </style>
+</head>
+<body>
+    <div class="container profile-container">
+        <h2 class="text-center">EMPLOYEE PROFILE</h2>
+        <div class="text-center">
+            {% if employee[6] %}
+               <img src="{{ url_for('static', filename='known_faces/' + employee[6]) }}" alt="Profile Image" class="profile-image">
+
+
+
+            {% else %}
+                <img src="{{ url_for('static', filename='default_profile.png') }}" alt="Default Profile Image" class="profile-image">
+            {% endif %}
+        </div>
+        <table class="table table-bordered mt-4">
+            <tr>
+                <th>Name</th>
+                <td>{{ employee[1] }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ employee[2] }}</td>
+            </tr>
+            <tr>
+                <th>Role</th>
+                <td>{{ employee[3] }}</td>
+            </tr>
+            <tr>
+                <th>Employee Type</th>
+                <td>{{ employee[5] }}</td>
+            </tr>
+        </table>
+        <div class="text-center">
+            <a href="{{ url_for('staff_dashboard') }}" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+</body>
+</html>
